@@ -1,0 +1,19 @@
+{
+  "schema": "clauseroute-v1",
+  "case_reference": "CASE-2026-001",
+  "dispute_type": "software-services-payment",
+  "amount_band": "USD-100K-250K",
+  "claimant_country": "SG",
+  "respondent_country": "DE",
+  "effective_date": "2026-08-01",
+  "main_contract_path": "fixtures/happy/main_contract.txt",
+  "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+  "amendment_path": "fixtures/happy/amendment.txt",
+  "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+  "incorporated_terms_path": "fixtures/happy/incorporated_terms.txt",
+  "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+  "notice_path": "fixtures/happy/notice.txt",
+  "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+  "precedence_path": "fixtures/happy/precedence.txt",
+  "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592"
+}

@@ -1,0 +1,2 @@
+genlayer-test==0.2.16
+pytest==8.4.2
