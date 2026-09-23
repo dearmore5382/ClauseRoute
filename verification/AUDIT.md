@@ -13,5 +13,4 @@
 | Arbitrary URL attempt | URLs are derived from registered repo | static source test |
 | Native-value/custody attempt | no payable/transfer surface exists | static source test |
 
-Local result: `14 passed`. This is test evidence, not a claim of StudioNet deployment.
-
+Local result: `14 passed`. StudioNet result: `20/20` finalized lifecycle/adversarial steps with authoritative readback. Validator semantic disagreement and prompt-output injection are exercised locally because live validators cannot be instructed to deliberately forge a competing observation.

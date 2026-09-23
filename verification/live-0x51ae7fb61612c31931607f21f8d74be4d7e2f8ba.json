@@ -1,0 +1,1281 @@
+{
+  "contract": "0x51Ae7fB61612c31931607F21f8D74be4D7E2f8BA",
+  "network": "StudioNet",
+  "source_sha256": "8c0f3431af3aa007c9a4a570ef5ee310a12210ba1b82fdfe63b7ac6e26fe8988",
+  "fixture_commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+  "fixture_manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+  "started_at": "2026-09-23T02:41:39.811962+00:00",
+  "wallets": [
+    "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+    "0xA63DE24e30C88FB1019E8956654730316e36eDBE"
+  ],
+  "steps": [
+    {
+      "id": "F1-invalid-authority",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_authority",
+      "args": [
+        "Invalid",
+        "bad/owner",
+        "ClauseRoute",
+        "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages."
+      ],
+      "allowed": [
+        "INVALID_AUTHORITY"
+      ],
+      "counts": "0|0",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xcec4a2164790117afc374d5cde345d8c57569d9549139e6120534d563df151ad",
+      "actual": "INVALID_AUTHORITY",
+      "readback": {
+        "counts": "0|0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xcec4a2164790117afc374d5cde345d8c57569d9549139e6120534d563df151ad"
+    },
+    {
+      "id": "H1-register-authority",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_authority",
+      "args": [
+        "Cross-border services panel",
+        "dearmore5382",
+        "ClauseRoute",
+        "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages."
+      ],
+      "allowed": [
+        "0"
+      ],
+      "counts": "1|0",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xca0a1db9c98aa81b70546e65edf3c02274f94a3e6a2ebdd6da43e137f827cf79",
+      "actual": "0",
+      "readback": {
+        "counts": "1|0",
+        "authority_0": {
+          "case_count": 0,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        }
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xca0a1db9c98aa81b70546e65edf3c02274f94a3e6a2ebdd6da43e137f827cf79"
+    },
+    {
+      "id": "A1-outsider-open",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "open_case",
+      "args": [
+        0,
+        "CASE-2026-001",
+        "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+        "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+        "software-services-payment",
+        "USD-100K-250K",
+        "SG",
+        "DE"
+      ],
+      "allowed": [
+        "CONTROLLER_ONLY"
+      ],
+      "counts": "1|0",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xbd6bd4dd958dbe94063ec8260cd46d8f440300e01e8340c95bdcdda0ecde5d5f",
+      "actual": "CONTROLLER_ONLY",
+      "readback": {
+        "counts": "1|0",
+        "authority_0": {
+          "case_count": 0,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        }
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xbd6bd4dd958dbe94063ec8260cd46d8f440300e01e8340c95bdcdda0ecde5d5f"
+    },
+    {
+      "id": "H2-open-happy",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "open_case",
+      "args": [
+        0,
+        "CASE-2026-001",
+        "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+        "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+        "software-services-payment",
+        "USD-100K-250K",
+        "SG",
+        "DE"
+      ],
+      "allowed": [
+        "0"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x14fe122ce7670783a869d35d41056a400e767f44c154e4768f8458bb4c723320",
+      "actual": "0",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "",
+          "manifest_sha256": "",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "OPEN",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x14fe122ce7670783a869d35d41056a400e767f44c154e4768f8458bb4c723320"
+    },
+    {
+      "id": "A2-outsider-attach",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "attach_document_set",
+      "args": [
+        0,
+        "ea3d3c260712838092e7704a62f5840281f09b52",
+        "fixtures/happy/manifest.json",
+        "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3"
+      ],
+      "allowed": [
+        "STEWARD_ONLY"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xd40d56580b1bbcf2a764e4fd108c2e39abefb014185c5510853307c505630357",
+      "actual": "STEWARD_ONLY",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "",
+          "manifest_sha256": "",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "OPEN",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd40d56580b1bbcf2a764e4fd108c2e39abefb014185c5510853307c505630357"
+    },
+    {
+      "id": "F2-invalid-locator",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "attach_document_set",
+      "args": [
+        0,
+        "main",
+        "fixtures/happy/manifest.json",
+        "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3"
+      ],
+      "allowed": [
+        "INVALID_DOCUMENT_LOCATOR"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xb9c40b15bfb03693d9609fe721b3d1fc03d7457f7d18ab9d6ca57322e2b63b1c",
+      "actual": "INVALID_DOCUMENT_LOCATOR",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "",
+          "manifest_sha256": "",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "OPEN",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xb9c40b15bfb03693d9609fe721b3d1fc03d7457f7d18ab9d6ca57322e2b63b1c"
+    },
+    {
+      "id": "H3-attach-happy",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "attach_document_set",
+      "args": [
+        0,
+        "ea3d3c260712838092e7704a62f5840281f09b52",
+        "fixtures/happy/manifest.json",
+        "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3"
+      ],
+      "allowed": [
+        "DOCUMENT_SET_ATTACHED"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x4217b7f4fd5e33e75d3eb0584bd1a86d2a9f17528b61cb00c8ed4cf91c48c4e6",
+      "actual": "DOCUMENT_SET_ATTACHED",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "ATTACHED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4217b7f4fd5e33e75d3eb0584bd1a86d2a9f17528b61cb00c8ed4cf91c48c4e6"
+    },
+    {
+      "id": "A3-premature-assess",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_route",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "CASE_NOT_ASSESSABLE"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x176f2d6245fb4ddd1735c41847f13e425326ef7b1ca93cd117b39b0b6e2cbadd",
+      "actual": "CASE_NOT_ASSESSABLE",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "ATTACHED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x176f2d6245fb4ddd1735c41847f13e425326ef7b1ca93cd117b39b0b6e2cbadd"
+    },
+    {
+      "id": "H4-seal-happy",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "seal_case",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "CASE_SEALED"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x28d7d23bffd018759b4af63a1b4d6c5e59e5e9a558fd014eb24aa9f8a7dda1fd",
+      "actual": "CASE_SEALED",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "SEALED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x28d7d23bffd018759b4af63a1b4d6c5e59e5e9a558fd014eb24aa9f8a7dda1fd"
+    },
+    {
+      "id": "A4-outsider-seal",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "seal_case",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "STEWARD_ONLY"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x43105e0fa4d2f741b8d42ac959a7fe9a3b1e13eba1b2b3807c5ce6c66ebd9b62",
+      "actual": "STEWARD_ONLY",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "SEALED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x43105e0fa4d2f741b8d42ac959a7fe9a3b1e13eba1b2b3807c5ce6c66ebd9b62"
+    },
+    {
+      "id": "H5-assess-happy",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_route",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "ARBITRATION"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x0cad1d97df9e61fc3ca1d0950a3bb4fb84aa42230d6dc492226fc1cb169a3fe7",
+      "actual": "ARBITRATION",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        }
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x0cad1d97df9e61fc3ca1d0950a3bb4fb84aa42230d6dc492226fc1cb169a3fe7"
+    },
+    {
+      "id": "A5-assessment-replay",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "assess_route",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "CASE_NOT_ASSESSABLE"
+      ],
+      "counts": "1|1",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x8690a7d59cdae11d6bfb2f99673b6caf826f8156ac1cd20896ecb875b50085b2",
+      "actual": "CASE_NOT_ASSESSABLE",
+      "readback": {
+        "counts": "1|1",
+        "authority_0": {
+          "case_count": 1,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        }
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x8690a7d59cdae11d6bfb2f99673b6caf826f8156ac1cd20896ecb875b50085b2"
+    },
+    {
+      "id": "F3-open-integrity",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "open_case",
+      "args": [
+        0,
+        "CASE-2026-002",
+        "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+        "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+        "software-services-payment",
+        "USD-100K-250K",
+        "SG",
+        "DE"
+      ],
+      "allowed": [
+        "1"
+      ],
+      "counts": "1|2",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xc0122cc05e3119ad75f96eababa19f9f77d079d2914dffbb6555f62b56cbef90",
+      "actual": "1",
+      "readback": {
+        "counts": "1|2",
+        "authority_0": {
+          "case_count": 2,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "",
+          "manifest_sha256": "",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "OPEN",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xc0122cc05e3119ad75f96eababa19f9f77d079d2914dffbb6555f62b56cbef90"
+    },
+    {
+      "id": "F4-attach-wrong-digest",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "attach_document_set",
+      "args": [
+        1,
+        "ea3d3c260712838092e7704a62f5840281f09b52",
+        "fixtures/happy/manifest.json",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "allowed": [
+        "DOCUMENT_SET_ATTACHED"
+      ],
+      "counts": "1|2",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x72d96f568ce8b3202f73ff8024fbbd6bc566ae6273c3ebe2844b525712d00ae6",
+      "actual": "DOCUMENT_SET_ATTACHED",
+      "readback": {
+        "counts": "1|2",
+        "authority_0": {
+          "case_count": 2,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "ATTACHED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x72d96f568ce8b3202f73ff8024fbbd6bc566ae6273c3ebe2844b525712d00ae6"
+    },
+    {
+      "id": "F5-seal-integrity",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "seal_case",
+      "args": [
+        1
+      ],
+      "allowed": [
+        "CASE_SEALED"
+      ],
+      "counts": "1|2",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x0af9a7e4f590f3cc24c01de1cc762083f4711b0f3872694f49433bb97dd6ce70",
+      "actual": "CASE_SEALED",
+      "readback": {
+        "counts": "1|2",
+        "authority_0": {
+          "case_count": 2,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "SEALED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x0af9a7e4f590f3cc24c01de1cc762083f4711b0f3872694f49433bb97dd6ce70"
+    },
+    {
+      "id": "F6-assess-integrity",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_route",
+      "args": [
+        1
+      ],
+      "allowed": [
+        "DOCUMENT_SET_REJECTED"
+      ],
+      "counts": "1|2",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x41591fcd26fb45dcc20baa938df1a07ef464918da8889573b3c5895c50900c23",
+      "actual": "DOCUMENT_SET_REJECTED",
+      "readback": {
+        "counts": "1|2",
+        "authority_0": {
+          "case_count": 2,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "DOCUMENT_SET_REJECTED",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": {
+          "amendment_controls": "UNCLEAR",
+          "amendment_sha256": "",
+          "arbitration_controls_merits": "UNCLEAR",
+          "clauses_conflict": "UNCLEAR",
+          "court_controls_merits": "UNCLEAR",
+          "dispute_in_scope": "UNCLEAR",
+          "incorporated_terms_sha256": "",
+          "main_contract_sha256": "",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "UNCLEAR",
+          "notice_sha256": "",
+          "precedence_sha256": "",
+          "source_status": "INTEGRITY_FAILURE"
+        }
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x41591fcd26fb45dcc20baa938df1a07ef464918da8889573b3c5895c50900c23"
+    },
+    {
+      "id": "R1-open-retry",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "open_case",
+      "args": [
+        0,
+        "CASE-2026-003",
+        "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+        "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+        "software-services-payment",
+        "USD-100K-250K",
+        "SG",
+        "DE"
+      ],
+      "allowed": [
+        "2"
+      ],
+      "counts": "1|3",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xffd37b6b4f60547fb9bceb4595a7afdd24189534d1287c7c68d9f1bd20647e84",
+      "actual": "2",
+      "readback": {
+        "counts": "1|3",
+        "authority_0": {
+          "case_count": 3,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "DOCUMENT_SET_REJECTED",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": {
+          "amendment_controls": "UNCLEAR",
+          "amendment_sha256": "",
+          "arbitration_controls_merits": "UNCLEAR",
+          "clauses_conflict": "UNCLEAR",
+          "court_controls_merits": "UNCLEAR",
+          "dispute_in_scope": "UNCLEAR",
+          "incorporated_terms_sha256": "",
+          "main_contract_sha256": "",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "UNCLEAR",
+          "notice_sha256": "",
+          "precedence_sha256": "",
+          "source_status": "INTEGRITY_FAILURE"
+        },
+        "case_2": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "",
+          "manifest_sha256": "",
+          "reference": "CASE-2026-003",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "OPEN",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_2": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xffd37b6b4f60547fb9bceb4595a7afdd24189534d1287c7c68d9f1bd20647e84"
+    },
+    {
+      "id": "R2-attach-missing-source",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "attach_document_set",
+      "args": [
+        2,
+        "ea3d3c260712838092e7704a62f5840281f09b52",
+        "fixtures/happy/missing.json",
+        "1111111111111111111111111111111111111111111111111111111111111111"
+      ],
+      "allowed": [
+        "DOCUMENT_SET_ATTACHED"
+      ],
+      "counts": "1|3",
+      "status": "READBACK_VERIFIED",
+      "hash": "0xf1609ec97489e175b96476bab5d0245108d2d375d7b7cc8e1b93712059bbb8b2",
+      "actual": "DOCUMENT_SET_ATTACHED",
+      "readback": {
+        "counts": "1|3",
+        "authority_0": {
+          "case_count": 3,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "DOCUMENT_SET_REJECTED",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": {
+          "amendment_controls": "UNCLEAR",
+          "amendment_sha256": "",
+          "arbitration_controls_merits": "UNCLEAR",
+          "clauses_conflict": "UNCLEAR",
+          "court_controls_merits": "UNCLEAR",
+          "dispute_in_scope": "UNCLEAR",
+          "incorporated_terms_sha256": "",
+          "main_contract_sha256": "",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "UNCLEAR",
+          "notice_sha256": "",
+          "precedence_sha256": "",
+          "source_status": "INTEGRITY_FAILURE"
+        },
+        "case_2": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/missing.json",
+          "manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "reference": "CASE-2026-003",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "ATTACHED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_2": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xf1609ec97489e175b96476bab5d0245108d2d375d7b7cc8e1b93712059bbb8b2"
+    },
+    {
+      "id": "R3-seal-retry",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "seal_case",
+      "args": [
+        2
+      ],
+      "allowed": [
+        "CASE_SEALED"
+      ],
+      "counts": "1|3",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x9122e0dd04e96460dfcbb708c412f463793aba1d563ea96482462906e73689ac",
+      "actual": "CASE_SEALED",
+      "readback": {
+        "counts": "1|3",
+        "authority_0": {
+          "case_count": 3,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "DOCUMENT_SET_REJECTED",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": {
+          "amendment_controls": "UNCLEAR",
+          "amendment_sha256": "",
+          "arbitration_controls_merits": "UNCLEAR",
+          "clauses_conflict": "UNCLEAR",
+          "court_controls_merits": "UNCLEAR",
+          "dispute_in_scope": "UNCLEAR",
+          "incorporated_terms_sha256": "",
+          "main_contract_sha256": "",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "UNCLEAR",
+          "notice_sha256": "",
+          "precedence_sha256": "",
+          "source_status": "INTEGRITY_FAILURE"
+        },
+        "case_2": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/missing.json",
+          "manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "reference": "CASE-2026-003",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "SEALED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_2": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x9122e0dd04e96460dfcbb708c412f463793aba1d563ea96482462906e73689ac"
+    },
+    {
+      "id": "R4-assess-missing-source",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_route",
+      "args": [
+        2
+      ],
+      "allowed": [
+        "ASSESSMENT_RETRYABLE"
+      ],
+      "counts": "1|3",
+      "status": "READBACK_VERIFIED",
+      "hash": "0x8c7ee168ca444a65b93a9e5a4d8707c7b5f3c562ac1925aff81869fa8fd9540f",
+      "actual": "ASSESSMENT_RETRYABLE",
+      "readback": {
+        "counts": "1|3",
+        "authority_0": {
+          "case_count": 3,
+          "controller": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "name": "Cross-border services panel",
+          "policy": "Read authenticated documents in precedence order. Treat court clauses limited to interim relief or award enforcement as not controlling merits. Do not decide enforceability, liability, or damages.",
+          "repository": "dearmore5382/ClauseRoute"
+        },
+        "case_0": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "reference": "CASE-2026-001",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "ARBITRATION",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_0": {
+          "amendment_controls": "YES",
+          "amendment_sha256": "376edc4e667b1ebf3872e3cd23bf322a76c7c6bc7ad8e16a47c7a85dd53deecb",
+          "arbitration_controls_merits": "YES",
+          "clauses_conflict": "NO",
+          "court_controls_merits": "NO",
+          "dispute_in_scope": "YES",
+          "incorporated_terms_sha256": "3d7fbabd3c7c1bb19567031d76bb5e20d5794985c974693c4122100a0a75798f",
+          "main_contract_sha256": "b5342019576ae39e342367efa57179bb0490ac8ff7971605e560ac90614bae42",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "NO",
+          "notice_sha256": "3b6736456b33089bbb50fd88d51fd6f1dc2204de15069c40a07bdf4d81f10876",
+          "precedence_sha256": "8000af05b54ef265248e1c72c7c80d33ce80b867a777e6b276001ac35eb7e592",
+          "source_status": "VERIFIED"
+        },
+        "case_1": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/manifest.json",
+          "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reference": "CASE-2026-002",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "DOCUMENT_SET_REJECTED",
+          "status": "CLOSED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_1": {
+          "amendment_controls": "UNCLEAR",
+          "amendment_sha256": "",
+          "arbitration_controls_merits": "UNCLEAR",
+          "clauses_conflict": "UNCLEAR",
+          "court_controls_merits": "UNCLEAR",
+          "dispute_in_scope": "UNCLEAR",
+          "incorporated_terms_sha256": "",
+          "main_contract_sha256": "",
+          "manifest_sha256": "ed90c72fd0278706bfb610de688eeeb16d9ff0d9c00d20dfa2e48ddaaacf0fe3",
+          "negotiation_prerequisite_unsatisfied": "UNCLEAR",
+          "notice_sha256": "",
+          "precedence_sha256": "",
+          "source_status": "INTEGRITY_FAILURE"
+        },
+        "case_2": {
+          "amount_band": "USD-100K-250K",
+          "authority_id": 0,
+          "claimant": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+          "claimant_country": "SG",
+          "commit": "ea3d3c260712838092e7704a62f5840281f09b52",
+          "dispute_type": "software-services-payment",
+          "manifest_path": "fixtures/happy/missing.json",
+          "manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "reference": "CASE-2026-003",
+          "respondent": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+          "respondent_country": "DE",
+          "route": "UNDETERMINED",
+          "status": "SEALED",
+          "steward": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB"
+        },
+        "finding_2": null
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x8c7ee168ca444a65b93a9e5a4d8707c7b5f3c562ac1925aff81869fa8fd9540f"
+    }
+  ],
+  "complete": true,
+  "completed_at": "2026-09-23T02:59:43.131816+00:00"
+}

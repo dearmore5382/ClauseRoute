@@ -10,4 +10,4 @@
 8. Read `get_case` and `get_finding`, and record explorer links for every transaction.
 9. Exercise failure evidence separately: wrong manifest digest, identity substitution, unavailable source, injected model output, and validator disagreement.
 
-Deployment is recorded in `verification/LIVE_RESULTS.md`; lifecycle calls remain unclaimed until their finalized transaction hashes are added there.
+Deployment and the complete 20-step StudioNet lifecycle matrix are recorded in `verification/LIVE_RESULTS.md` and the public JSON journal.
